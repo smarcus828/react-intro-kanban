@@ -1,14 +1,24 @@
 import './App.css'
-
+import TaskCard from './task-card'
+import { Task } from "./data-tasks"
 
 function App() {
+  const task: Task = {
+    title: "Do Something",
+    id: "this is the id",
+    points: 77
+  }
 
   return (
-    <div className="text-4xl  border rounded-lg border-red-800 bg-gray-200 p-2 m-2" >
-      Hello
-    </div>
-
-    )
+    <>
+      Something at the top
+      <TaskCard task={task} />
+      {/* <TaskCard title={task.title} id={task.id} points={task.points} />
+      <TaskCard title="Fleenar the wonderful" id="Bus-1109" points={4560566} />
+      <TaskCard title='TEST2' id='id2' />
+      <TaskCard title='Develop' id='secondary information here' points={9999} /> */}
+    </>
+  )
 }
 
 export default App
