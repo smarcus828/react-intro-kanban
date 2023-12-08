@@ -3,16 +3,38 @@ import TaskCard from './components/TaskCard'
 import { Task } from "./utils/data-tasks"
 
 function App() {
-  const task: Task = {
-    title: "Do Something",
-    id: "this is the id",
-    points: 77
-  }
+  const tasks: Task[] = [
+    {
+      title: "Do the first thing",
+      id: "id 1",
+      points: 111,
+    },
+    {
+      title: "Do the second thing",
+      id: "id 2",
+      points: 2222,
+    },
+    {
+      title: "Do the third thing",
+      id: "id 3",
+      points: 333,
+    },
+    {
+      title: "Do the fourth thing",
+      id: "id 4",
+      points: 44444,
+    },
+
+
+  ]
 
   return (
     <>
       Something at the top
-      <TaskCard task={task} />
+      {tasks.map((task) => <TaskCard task={task} />)}
+
+      {/* <TaskCard task={task} />
+      <TaskCard task={task2} /> */}
       {/* <TaskCard title={task.title} id={task.id} points={task.points} />
       <TaskCard title="Fleenar the wonderful" id="Bus-1109" points={4560566} />
       <TaskCard title='TEST2' id='id2' />
